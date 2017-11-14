@@ -1,0 +1,59 @@
+  ProjectCategory: 
+    type: object
+    description: 專案類別
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        description: 系統編號
+      categoryNo:
+        type: string
+        example: 01
+        description: 專案類別編號
+      categoryName:
+        type: string
+        example: 公司活動
+        description: 專案類別名稱
+  Project: 
+    type: object
+    description: 專案
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        description: 系統編號
+      projectNo:
+        type: string
+        example: 01
+        description: 專案代碼
+      projectName:
+        type: string
+        example: 測試專案
+        description: 專案名稱
+      projectCategoryId:
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f8902
+        description: 專案類別的系統編號
+  ProjectItem: 
+    type: object
+    description: 專案項目
+    properties:
+      id:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        description: 系統編號
+      itemName:
+        type: string
+        example: 01
+        description: 專案項目
+      description:
+        type: string
+        example: 測試項目
+        description: 項目說明
+      projectId:
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        description: 專案項目的系統編號
